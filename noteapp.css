@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(/Todo-List-App/wave-haikei.svg);
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  background-color: rgb(230, 230, 230);
+  margin: auto auto;
+  min-height: 1305px;
+  width: 800px;
+  border-radius: 10px;
+}
+h1 {
+  padding-top: 20px;
+  text-align: center;
+}
+form {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  flex-flow: wrap;
+  height: 150px;
+}
+form input,
+form button {
+  border: solid;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px;
+  margin: 0 3px;
+  font-family: "Roboto Mono", monospace;
+}
+form button:hover {
+  background-color: rgba(0, 128, 0, 0.462);
+  cursor: pointer;
+}
+.todo-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+ul {
+  list-style: none;
+  min-width: 10%;
+}
+.todo-list {
+  display: flex;
+  justify-content: space-between;
+  transition: transform 0.3s;
+  opacity: 0;
+  animation-name: slidein;
+  animation-duration: 0.5s;
+  margin-bottom: 15px;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  width: fit-content;
+}
+li {
+  padding: 10px;
+  color: black;
+  min-width: 400px;
+}
+.linebreak {
+  flex-basis: 100%;
+}
+#warning {
+  color: rgb(255, 0, 0);
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+  padding: 15px;
+}
+.todo-list:hover {
+  transform: scale(1.07);
+}
+.checkbutton {
+  width: 70px;
+  height: 100%;
+  padding: 10px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.checkbutton:hover {
+  background-color: rgba(228, 81, 81, 0.727);
+  color: white;
+}
+@keyframes slidein {
+  from {
+    max-height: 0px;
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  to {
+    max-height: 1000px;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
